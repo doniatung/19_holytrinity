@@ -74,7 +74,7 @@ const median = parseInt(data. reduce(function(a, b){
     return a["total"] + b["total"];
 
   // check if finished
-  if (type of a == "string")
+  if (typeof a == "string")
     return a;
 
   // check if pop sum so far is greater than the median
@@ -108,7 +108,8 @@ const miniors = data.reduce(function(a, b){
   return a
 });
 
-
+//log results
+console.log("minior pop", miniors);
 
 /*
   ==============================================================================
