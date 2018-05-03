@@ -1,8 +1,8 @@
 /*
   salad - Donia Tung, Charles Weng
   SoftDev2   pd7
-  K #14: You Are Smarter Than the President*
-  2018-3-26
+  K #19: Onions, Bell Peppers, and Celery, Oh My!
+  2018-05-02
 */
 
 
@@ -49,8 +49,8 @@ const male = data.reduce(function(a, b){
 const total = male + female
 
 // calculate percentages
-const maleP = male / total
-const femaleP = female / total
+const maleP = male / total * 100
+const femaleP = female / total * 100
 
 // log results
 console.log("female: ", female);
@@ -116,5 +116,20 @@ console.log("minior pop", miniors);
                                 HTML things
   ==============================================================================
 */
+var inside = document.getElementById("innertext");
 
-// things to put into page: maleP femaleP median miniors
+var males = document.createElement("h5");
+males.innerHTML = "The percentage of males was: " + maleP + "%";
+inside.appendChild(males);
+
+var females = document.createElement("h5");
+females.innerHTML = "The percentage of females was: " + femaleP + "%";
+inside.appendChild(females);
+
+var med = document.createElement("h5");
+med.innerHTML = "The median age was: " + median;
+inside.appendChild(med);
+
+var minors = document.createElement("h5");
+minors.innerHTML = "The number of minors was: " + miniors;
+inside.appendChild(minors);
