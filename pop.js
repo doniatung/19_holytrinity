@@ -86,30 +86,30 @@ const median = parseInt(data. reduce(function(a, b){
 }));
 
 // log results
-console.log("meadian age: ", median);
+console.log("median age: ", median);
 
 /*
   ==============================================================================
-                                Minior Pop
+                                Minor Pop
   ==============================================================================
 */
 
-const miniors = data.reduce(function(a, b){
+const minors = data.reduce(function(a, b){
   // first case
   if(typeof a == "object"){
     return a["total"] + b["total"];
   }
 
-  // if minior sum
+  // if minor sum
   if (b["age"] < 18)
     return a + b["total"];
 
   // else return current sum
   return a
-});
+});=====
 
 //log results
-console.log("minior pop", miniors);
+console.log("minor pop", minors);
 
 /*
   ==============================================================================
@@ -131,5 +131,5 @@ med.innerHTML = "The median age was: " + median;
 inside.appendChild(med);
 
 var minors = document.createElement("h5");
-minors.innerHTML = "The number of minors was: " + miniors;
+minors.innerHTML = "The number of minors was: " + minors;
 inside.appendChild(minors);
